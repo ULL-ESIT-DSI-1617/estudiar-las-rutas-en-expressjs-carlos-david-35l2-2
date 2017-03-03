@@ -15,8 +15,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-carlos-david-35l2-2.git",
-    "wiki": "https://github.com/ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-carlos-david-35l2-2.wiki.git"
+    "url": "https://github.com/ULL-ESIT-DSI-1617/estudiar-las-rutas-en-expressjs-carlos-david-35l2-2.git",
+    "wiki": "https://github.com/ULL-ESIT-DSI-1617/estudiar-las-rutas-en-expressjs-carlos-david-35l2-2.git.wiki.git"
   },
   "keywords": [
     "gitbook",
@@ -26,9 +26,9 @@
   "author": " Carlos Fernández , David Dorta",
   "license": "GPL",
   "bugs": {
-    "url": "https://github.com/ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-carlos-david-35l2-2/issues"
+    "url": "https://github.com/ULL-ESIT-DSI-1617/estudiar-las-rutas-en-expressjs-carlos-david-35l2-2.git/issues"
   },
-  "homepage": "https://github.com/ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-carlos-david-35l2-2#readme",
+  "homepage": "https://github.com/ULL-ESIT-DSI-1617/estudiar-las-rutas-en-expressjs-carlos-david-35l2-2.git#readme",
   "devDependencies": {
     "async": "^1.4.0",
     "fs-extra": "^0.22.1",
