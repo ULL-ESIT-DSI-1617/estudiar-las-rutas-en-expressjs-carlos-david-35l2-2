@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Abrir cuenta en GitHub · GitBook</title>
+        <title>Direccionamiento básico · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="instalar-github-desktop.html" />
+    <link rel="next" href="routing-guide.html" />
     
     
     <link rel="prev" href="introduccion.html" />
@@ -210,9 +210,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="introduccion.html">
+        <li class="chapter " data-level="5.1" data-path="../04-github/introduccion.html">
             
-                <a href="introduccion.html">
+                <a href="../04-github/introduccion.html">
             
                     
                     Introducción
@@ -223,9 +223,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="5.2" data-path="abrir-cuenta-en-github.html">
+        <li class="chapter " data-level="5.2" data-path="../04-github/abrir-cuenta-en-github.html">
             
-                <a href="abrir-cuenta-en-github.html">
+                <a href="../04-github/abrir-cuenta-en-github.html">
             
                     
                     Abrir cuenta en GitHub
@@ -236,9 +236,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="instalar-github-desktop.html">
+        <li class="chapter " data-level="5.3" data-path="../04-github/instalar-github-desktop.html">
             
-                <a href="instalar-github-desktop.html">
+                <a href="../04-github/instalar-github-desktop.html">
             
                     
                     Instalar GitHub Desktop
@@ -249,9 +249,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.4" data-path="instalar-hub.html">
+        <li class="chapter " data-level="5.4" data-path="../04-github/instalar-hub.html">
             
-                <a href="instalar-hub.html">
+                <a href="../04-github/instalar-hub.html">
             
                     
                     Instalar Hub
@@ -349,9 +349,9 @@
         
         
     
-        <li class="chapter " data-level="10.1" data-path="../08-expressjs/introduccion.html">
+        <li class="chapter " data-level="10.1" data-path="introduccion.html">
             
-                <a href="../08-expressjs/introduccion.html">
+                <a href="introduccion.html">
             
                     
                     Introducción
@@ -362,9 +362,9 @@
             
         </li>
     
-        <li class="chapter " data-level="10.2" data-path="../08-expressjs/basic-routing.html">
+        <li class="chapter active" data-level="10.2" data-path="basic-routing.html">
             
-                <a href="../08-expressjs/basic-routing.html">
+                <a href="basic-routing.html">
             
                     
                     Direccionamiento básico
@@ -375,9 +375,9 @@
             
         </li>
     
-        <li class="chapter " data-level="10.3" data-path="../08-expressjs/routing-guide.html">
+        <li class="chapter " data-level="10.3" data-path="routing-guide.html">
             
-                <a href="../08-expressjs/routing-guide.html">
+                <a href="routing-guide.html">
             
                     
                     Direccionamiento
@@ -388,9 +388,9 @@
             
         </li>
     
-        <li class="chapter " data-level="10.4" data-path="../08-expressjs/using-middleware.html">
+        <li class="chapter " data-level="10.4" data-path="using-middleware.html">
             
-                <a href="../08-expressjs/using-middleware.html">
+                <a href="using-middleware.html">
             
                     
                     Utilización del middleware
@@ -431,7 +431,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Abrir cuenta en GitHub</a>
+        <a href=".." >Direccionamiento básico</a>
     </h1>
 </div>
 
@@ -446,13 +446,40 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><img src="../assets/GitHub_01.jpg" alt=""></p>
-<p>Siga los siguientes pasos para abrir una cuenta en GitHub, </p>
-<ol>
-<li>Abrir la <a href="https://github.com/" target="_blank">web oficial de GitHub.</a></li>
-<li>Rellenar los campos que nos sale en la siguiente imagen y darle al bot&#xF3;n de &quot;Sign up for GitHub&quot;</li>
-</ol>
-<p><img src="../assets/GitHub_02.png" alt=""></p>
+                                <h1 id="direccionamiento-b&#xE1;sico">Direccionamiento b&#xE1;sico </h1>
+<p>El direccionamiento hace referencia a la determinaci&#xF3;n de c&#xF3;mo responde una aplicaci&#xF3;n a una solicitud de cliente en un determinado punto final, que es un URI (o una v&#xED;a de acceso) y un m&#xE9;todo de solicitud HTTP espec&#xED;fico (GET, POST, etc.).</p>
+<p>La definici&#xF3;n de ruta tiene la siguiente estructura:</p>
+<pre><code class="lang-js">app.METHOD(PATH, HANDLER)
+</code></pre>
+<h4 id="los-siguientes-ejemplos-ilustran-la-definici&#xF3;n-de-rutas-simples">Los siguientes ejemplos ilustran la definici&#xF3;n de rutas simples:</h4>
+<p>Responde con &quot;GET Respuesta al apartado basic_routing&quot; en la p&#xE1;gina inicial.</p>
+<pre><code class="lang-js">app.get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+
+res.send(<span class="hljs-string">&apos;GET Respuesta al apartado basic_routing&apos;</span>)
+
+})
+</code></pre>
+<p>Responde a la solicitud POST en la ruta ra&#xED;z (/), la p&#xE1;gina de inicio de la aplicaci&#xF3;n.</p>
+<pre><code class="lang-js">app.post(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+
+  res.send(<span class="hljs-string">&apos;POST Respuesta al apartado basic_routing&apos;</span>)
+
+})
+</code></pre>
+<p>Responde a una solicitud PUT en la ruta ra&#xED;z (/).</p>
+<pre><code class="lang-js">app.put(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+
+  res.send(<span class="hljs-string">&apos;Got a PUT  al apartado basic_routing&apos;</span>)
+
+})
+</code></pre>
+<p>Responde a una solicitud DELETE en la ruta ra&#xED;z(/).</p>
+<pre><code class="lang-js">app.delete(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+
+  res.send(<span class="hljs-string">&apos;Got a DELETE al apartado basic_routing&apos;</span>)
+
+})
+</code></pre>
 
                                 
                                 </section>
@@ -485,7 +512,7 @@
                 </a>
                 
                 
-                <a href="instalar-github-desktop.html" class="navigation navigation-next " aria-label="Next page: Instalar GitHub Desktop">
+                <a href="routing-guide.html" class="navigation navigation-next " aria-label="Next page: Direccionamiento">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -496,7 +523,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Abrir cuenta en GitHub","level":"5.2","depth":1,"next":{"title":"Instalar GitHub Desktop","level":"5.3","depth":1,"path":"04-github/instalar-github-desktop.md","ref":"04-github/instalar-github-desktop.md","articles":[]},"previous":{"title":"Introducción","level":"5.1","depth":1,"path":"04-github/introduccion.md","ref":"04-github/introduccion.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04-github/abrir-cuenta-en-github.md","mtime":"2017-03-04T14:03:41.555Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-04T14:12:32.222Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Direccionamiento básico","level":"10.2","depth":1,"next":{"title":"Direccionamiento","level":"10.3","depth":1,"path":"08-expressjs/routing-guide.md","ref":"08-expressjs/routing-guide.md","articles":[]},"previous":{"title":"Introducción","level":"10.1","depth":1,"path":"08-expressjs/introduccion.md","ref":"08-expressjs/introduccion.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"08-expressjs/basic-routing.md","mtime":"2017-03-04T14:03:41.555Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-04T14:12:32.222Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
